@@ -31,6 +31,8 @@ Enable the script in collectd:
 
 ## Notes
 
+* The script will collect additional data for Vectoring lines if a [https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=f872b966092ece5c0e2192e0d979a9eb69283f17](build containing the fixes for Vectoring samples) is used. In 21.02 and 22.03-RCs the statistics will show an empty graph for these values.
+
 * The optional modified `rrdtool.js` should (and in all my tests does) not interfere with existing statistics definitions, but I can't test all cases of all definitions. If it causes errors in other more uncommon scenarios feedback will be appreciated.
 
 * `exec.js` contains code to display the same data, collected from a Broadcom-based ZyXEL VMG1312-B30A modem using a different shell script. I can currently not test the script to collect the data, so it is not published here until I can.
