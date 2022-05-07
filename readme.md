@@ -1,6 +1,9 @@
 This set of scripts collects and displays xDSL modem statistics in OpenWrt for Lantiq targets with an internal xDSL modem.
 
 
+<img src="screenshot.png?raw=true" width="400">
+
+
 ## Compatibility
 
 OpenWrt 21.02, 22.03, snapshots (as of May 2022)
