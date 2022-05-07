@@ -18,7 +18,7 @@ To collect data, the packages `collectd` and `collectd-mod-exec` are required. T
 
 Put the following files into the file system:
 
-* `/etc/collecd/collectd-dslstats-lantiq.sh` and make it executable (`chmod +x`)  
+* `/etc/collectd/collectd-dslstats-lantiq.sh` and make it executable (`chmod +x`)  
   the shell script responsible for collecting the data
 * `/usr/share/rpcd/acl.d/collectd-exec-lantiqdsl.json`  
   extends the ACL (access control list) to allow the shell script to access dsl metrics via ubus  
