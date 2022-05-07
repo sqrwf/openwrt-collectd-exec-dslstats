@@ -6,6 +6,7 @@ return baseclass.extend({
 
 	rrdargs: function(graph, host, plugin, plugin_instance, dtype) {
 
+		/* Graph settings */
 		var _settings = {
 			/* Graph colors */
 			colors : {
@@ -15,10 +16,6 @@ return baseclass.extend({
 				far_regular  : { line : "000066", area : "a3a3cc" },
 				far_minor    : { line : "8080b3", area : "c8c8e0" },
 				far_error    : { line : "660000", area : "660000" }
-			},
-			height : {
-				minor       : 80
-					/* false to use default size */
 			},
 			scaling : {
 				datarates   : { factor : ( plugin_instance == 'dslstats-lantiq' ? "0.000001" : "0.001" ) },
@@ -36,8 +33,7 @@ return baseclass.extend({
 		var uptime = {
 			title: "%H: DSL line uptime",
 			vlabel: "days",
-			y_max: 1,
-				/* give an initial sensible scale if uptime is less than one day */
+			y_max: 1, /* give an initial sensible scale if uptime is less than one day */
 			number_format: "%5.1lf days",
 			rrdopts: ["-h 80", "-N"],
 			data: {
@@ -151,11 +147,6 @@ return baseclass.extend({
 				}
 			}
 		};
-
-		/*
-			For all event/error values below: collectd scales these values per-second, but rrd display is scaled per-timeframe (hour/day/week/year).
-			A compromise is to have rrd multiply the values by 86400, effectively scaling them "per day" when displayed in rrd.
-		*/ 
 
 		/* FECs graph (Lantiq counts FEC seconds) */
 		var errors_fecs = {
