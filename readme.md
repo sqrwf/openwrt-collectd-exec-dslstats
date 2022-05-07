@@ -27,7 +27,7 @@ Put the following files into the file system:
 * optional: `/www/luci-static/resources/statistics/rrdtool.js`  
   improved/modified statistics display script, allowing for more control over the graphs' visual parameters
 
-Reboot the system to have the ACL extension to take effect.
+Reboot the system to have the ACL extension take effect.
   
 Enable the script in collectd:
 
@@ -37,6 +37,8 @@ Enable the script in collectd:
 
 
 ## Notes
+
+* I am not aware of any other, more elegant way to reload the ACL than to reboot the system.
 
 * The script will collect additional data for Vectoring lines if a [build containing the fixes for Vectoring samples](https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=f872b966092ece5c0e2192e0d979a9eb69283f17) is used. In 21.02 and 22.03-RCs the statistics will show an empty graph for these values.
 
