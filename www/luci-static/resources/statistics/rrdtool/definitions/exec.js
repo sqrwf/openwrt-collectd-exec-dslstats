@@ -84,7 +84,7 @@ return baseclass.extend({
 						title:         "Downstream (max.)",
 						transform_rpn: _settings.scaling.datarates.factor + ",*",
 						color:         _settings.colors.near_minor.line,
-						color:         _settings.colors.near_minor.line,
+						area_color:    _settings.colors.near_minor.area,
 						noline:        true,
 						overlay:       true,
 						weight:        1
@@ -227,7 +227,7 @@ return baseclass.extend({
 					errors_far_rtx_tx: {
 						title:         "Far->near retransmitted  (rtx-tx)",
 						transform_rpn: _settings.scaling.errors_dtu.factor + ",*",
-						color:         _settings.colors.near_regular.line,
+						color:         _settings.colors.near_minor.line,
 						area_color:    _settings.colors.near_minor.area,
 						noline:        true,
 						overlay:       true
