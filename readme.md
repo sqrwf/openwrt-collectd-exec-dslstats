@@ -25,7 +25,7 @@ Put the following files into the file system:
 
 * `/etc/collectd/collectd-dslstats-lantiq.sh` and make it executable (`chmod +x`)  
   shell script responsible for collecting the data
-* `/usr/share/rpcd/acl.d/collectd-exec-lantiqdsl.json`  
+* `/usr/share/acl.d/collectd-exec-lantiqdsl.json`  
   extends the ACL (access control list) allowing the "nobody" user access to ubus dsl metrics
 * `/www/luci-static/resources/statistics/rrdtool/definitions/exec.js`  
   definition for statistics display in LuCI
