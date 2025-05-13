@@ -476,7 +476,7 @@ return baseclass.extend({
 			if (typeof(source.color) == 'string') {
 				color = source.color;
 			}
-			else if (typeof(opts.colors[source.name.replace(/\W/g, '_')]) == 'string') {
+			else if (typeof(source.name) == 'string' && typeof(opts.colors[source.name.replace(/\W/g, '_')]) == 'string') {
 				color = opts.colors[source.name.replace(/\W/g, '_')];
 			}
 			else {
